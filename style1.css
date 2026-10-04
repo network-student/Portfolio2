@@ -1,0 +1,906 @@
+```css
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background: #0f172a;
+    color: white;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #e5e7eb;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #38bdf8;
+}
+
+.theme-btn,
+.menu-btn {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* =========================
+   HERO / ACCUEIL
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background: #0f172a;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    color: #38bdf8;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #38bdf8;
+}
+
+.hero-text {
+    max-width: 700px;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #0284c7;
+    color: white;
+}
+
+.primary:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.secondary:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+
+/* =========================
+   RÉSEAUX SOCIAUX
+========================= */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #475569;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #0284c7;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   À PROPOS
+========================= */
+
+.about-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 50px;
+}
+
+.about-text h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #64748b;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.info-box i {
+    font-size: 25px;
+    color: #0284c7;
+}
+
+
+/* =========================
+   COMPÉTENCES
+========================= */
+
+.skills-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+}
+
+.skill-card > i {
+    font-size: 35px;
+    color: #0284c7;
+
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+}
+
+.skill-card li {
+    margin: 8px 0;
+    color: #64748b;
+}
+
+.skill-card li::before {
+    content: "✓";
+
+    color: #0284c7;
+
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+
+/* =========================
+   PROJETS
+========================= */
+
+.projects-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    display: flex;
+    gap: 25px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-icon {
+    min-width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e0f2fe;
+
+    color: #0284c7;
+
+    border-radius: 10px;
+
+    font-size: 25px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+}
+
+.tags span {
+    padding: 5px 9px;
+
+    background: #e0f2fe;
+
+    color: #0369a1;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+}
+
+.project-link {
+    color: #0284c7;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HOME LAB
+========================= */
+
+.lab {
+    max-width: 1000px;
+    margin: auto;
+
+    padding: 40px;
+
+    background: #0f172a;
+
+    color: white;
+
+    border-radius: 12px;
+}
+
+.lab-text {
+    margin-bottom: 30px;
+}
+
+.lab-text p {
+    color: #cbd5e1;
+}
+
+.lab-tools {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.lab-tools span {
+    padding: 9px 15px;
+
+    border: 1px solid #334155;
+
+    border-radius: 5px;
+
+    color: #bae6fd;
+}
+
+
+/* =========================
+   FORMATION
+========================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 35px;
+
+    border-left: 2px solid #0284c7;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: -8px;
+    top: 0;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #0284c7;
+}
+
+.timeline-content {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-content span {
+    color: #0284c7;
+
+    font-size: 13px;
+}
+
+.timeline-content h3 {
+    margin: 5px 0;
+}
+
+.timeline-content h4 {
+    color: #64748b;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications {
+    max-width: 900px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.cert-card {
+    text-align: center;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.cert-card i {
+    font-size: 40px;
+
+    color: #0284c7;
+
+    margin-bottom: 15px;
+}
+
+.cert-card p {
+    color: #64748b;
+
+    margin: 10px 0;
+}
+
+.cert-card span {
+    color: #0284c7;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CV
+========================= */
+
+.cv-section {
+    text-align: center;
+
+    padding: 80px 8%;
+
+    background: #e0f2fe;
+}
+
+.cv-section h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.cv-section p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+}
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-item > i {
+    font-size: 25px;
+
+    color: #0284c7;
+}
+
+.contact-item a {
+    color: #0284c7;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0284c7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 40px 8%;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+}
+
+.footer-social {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   BOUTON RETOUR EN HAUT
+========================= */
+
+.top-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #0284c7;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.top-btn.show {
+    display: block;
+}
+
+
+/* =========================
+   MODE SOMBRE
+========================= */
+
+body.dark {
+    background: #020617;
+
+    color: #e2e8f0;
+}
+
+body.dark .section {
+    background: #020617;
+}
+
+body.dark .info-box,
+body.dark .skill-card,
+body.dark .project-card,
+body.dark .timeline-content,
+body.dark .cert-card,
+body.dark .contact-item {
+    background: #0f172a;
+
+    color: #e2e8f0;
+}
+
+body.dark .about-text p,
+body.dark .skill-card li,
+body.dark .project-content p,
+body.dark .contact-item p {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        gap: 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        background: #0f172a;
+
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .theme-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 85vh;
+
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .about-grid,
+    .contact-grid,
+    .projects-grid,
+    .certifications {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================
+   PETIT MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .lab {
+        padding: 25px;
+    }
+}
+```
